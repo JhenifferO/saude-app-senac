@@ -8,6 +8,7 @@ import { MedicosCategorias } from '@/app';
 import PopupEdicao from './popupEdicao';
 import PopupDetalhes from './popupDetalhes';
 import Loader from './Loader';
+import Entypo from '@expo/vector-icons/Entypo';
 
 type ConsultaCard = {
     data: Consultas[]
@@ -121,8 +122,8 @@ export default function ConsultaCard({ isHome, data, isMedico, getConsultas }: a
                                 </TouchableOpacity>
                                 :
                                 <View style={styles.button_actions}>
-                                    <TouchableOpacity style={styles.botao_login} onPress={() => setOpenModal(true)}>
-                                        <Text style={styles.texto_botao}>Editar</Text>
+                                    <TouchableOpacity onPress={() => setOpenModal(true)}>
+                                        <Entypo name="edit" size={24} color="black" />
                                     </TouchableOpacity>
                                     <TouchableOpacity onPress={() => deletarConsulta()}>
                                         <FontAwesome name="trash" size={24} color="black" />
@@ -195,7 +196,8 @@ const styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'row',
-        width: 110,
-        justifyContent: 'space-between'
+        width: 60,
+        justifyContent: 'space-between',
+        alignContent: 'center'
     }
 })

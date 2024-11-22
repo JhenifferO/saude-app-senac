@@ -225,8 +225,8 @@ export default function ConsultaForm({ getConsultas, setTab }: ConsultaFormProps
                 showsVerticalScrollIndicator={false}
                 dropdownStyle={styles.dropdownMenuStyle}
             />
-            <View style={{ borderBottomWidth: 1, borderColor: '#ccc', padding: 10, display: 'flex', flexDirection: 'row' }}>
-                <TouchableOpacity onPress={() => setShowDataPicker(true)} style={{ marginRight: 300 }}>
+            <View style={{ borderBottomWidth: 1, borderColor: '#ccc', padding: 10, display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                <TouchableOpacity onPress={() => setShowDataPicker(true)} >
                     <View style={styles.dateTimeContainer}>
                         <Fontisto name="date" size={20} color="black" />
                         <Text>{form.data.toLocaleDateString()}</Text>

@@ -67,8 +67,8 @@ export default function PopupEdicao({ visible, onClose, onSubmit, consulta, setC
                             placeholder="Médico"
                             value={`Médico: ${consulta.medico_nome}`}
                         />
-                        <View style={{ borderBottomWidth: 1, borderColor: '#ccc', padding: 10, display: 'flex', flexDirection: 'row' }}>
-                            <TouchableOpacity onPress={() => setShowDataPicker(true)} style={{ marginRight: 300 }}>
+                        <View style={{ borderBottomWidth: 1, borderColor: '#ccc', padding: 10, display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                            <TouchableOpacity onPress={() => setShowDataPicker(true)}>
                                 <View style={styles.dateTimeContainer}>
                                     <Fontisto name="date" size={20} color="black" />
                                     <Text>{new Date(consulta.data).toLocaleDateString()}</Text>
